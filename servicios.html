@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Servicios de consultoría de datos e IA - Estrategia, desarrollo e integración, y servicios gestionados para empresas dominicanas.">
+    <title>Servicios | Datívus</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#0f172a',
+                        cyan: '#06b6d4',
+                        slate: '#1e293b',
+                        light: '#f8fafc'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-slate bg-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="text-2xl font-bold text-navy">
+                    Datívus
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-slate hover:text-cyan transition-colors">Inicio</a>
+                    <a href="servicios.html" class="text-navy font-medium hover:text-cyan transition-colors">Servicios</a>
+                    <a href="nosotros.html" class="text-slate hover:text-cyan transition-colors">Nosotros</a>
+                    <a href="contacto.html" class="bg-cyan text-white px-5 py-2 rounded-lg hover:bg-cyan/90 transition-colors">Contacto</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2" aria-label="Menú">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-4 py-4 space-y-3">
+                <a href="index.html" class="block text-slate hover:text-cyan">Inicio</a>
+                <a href="servicios.html" class="block text-navy font-medium">Servicios</a>
+                <a href="nosotros.html" class="block text-slate hover:text-cyan">Nosotros</a>
+                <a href="contacto.html" class="block bg-cyan text-white px-4 py-2 rounded-lg text-center">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 px-4 bg-gradient-to-br from-navy to-slate-800">
+        <div class="max-w-6xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                Nuestros Servicios
+            </h1>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                Soluciones integrales de datos e inteligencia artificial, desde la estrategia hasta la implementación y el soporte continuo.
+            </p>
+        </div>
+    </section>
+
+    <!-- Service Tier 1: Consultoria -->
+    <section id="consultoria" class="py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="w-12 h-12 bg-cyan/10 rounded-xl flex items-center justify-center">
+                    <span class="text-cyan font-bold text-xl">1</span>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-navy">Consultoría y Estrategia</h2>
+                    <p class="text-slate">Definimos el camino hacia tu transformación de datos</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Estrategia de Datos -->
+                <div class="bg-light p-6 rounded-xl">
+                    <div class="w-12 h-12 bg-cyan/10 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-navy mb-3">Estrategia de Datos e IA</h3>
+                    <p class="text-slate mb-4">
+                        Desarrollamos roadmaps personalizados para llevar tu organización al siguiente nivel de madurez en datos.
+                    </p>
+                    <ul class="text-sm text-slate space-y-2">
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-cyan flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Evaluación de madurez de datos
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-cyan flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Roadmap de transformación digital
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-cyan flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Definición de gobernanza de datos
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Identificación de Casos de Uso -->
+                <div class="bg-light p-6 rounded-xl">
+                    <div class="w-12 h-12 bg-cyan/10 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-navy mb-3">Identificación de Casos de Uso</h3>
+                    <p class="text-slate mb-4">
+                        Encontramos las oportunidades de mayor impacto para implementar IA y analytics en tu negocio.
+                    </p>
+                    <ul class="text-sm text-slate space-y-2">
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-cyan flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Workshops de ideación
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-cyan flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Análisis de factibilidad técnica
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-cyan flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Priorización por ROI
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Evaluación de Procesos -->
+                <div class="bg-light p-6 rounded-xl">
+                    <div class="w-12 h-12 bg-cyan/10 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-navy mb-3">Evaluación de Procesos</h3>
+                    <p class="text-slate mb-4">
+                        Analizamos tus procesos actuales para identificar oportunidades de automatización y mejora.
+                    </p>
+                    <ul class="text-sm text-slate space-y-2">
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-cyan flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Mapeo de procesos actuales
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-cyan flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Identificación de cuellos de botella
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-cyan flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Plan de automatización
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Tier 2: Desarrollo -->
+    <section id="desarrollo" class="py-20 px-4 bg-light">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="w-12 h-12 bg-cyan/10 rounded-xl flex items-center justify-center">
+                    <span class="text-cyan font-bold text-xl">2</span>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-navy">Desarrollo e Integración</h2>
+                    <p class="text-slate">Construimos las soluciones que impulsan tu negocio</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Ingeniería de Datos -->
+                <div class="bg-white p-6 rounded-xl border border-gray-100">
+                    <div class="w-12 h-12 bg-cyan/10 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-navy mb-3">Ingeniería de Datos</h3>
+                    <p class="text-slate mb-4">
+                        Diseñamos y construimos la infraestructura de datos que tu empresa necesita para escalar.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-navy/5 text-navy text-sm rounded-full">Pipelines ETL/ELT</span>
+                        <span class="px-3 py-1 bg-navy/5 text-navy text-sm rounded-full">Data Warehouses</span>
+                        <span class="px-3 py-1 bg-navy/5 text-navy text-sm rounded-full">Data Lakes</span>
+                        <span class="px-3 py-1 bg-navy/5 text-navy text-sm rounded-full">Orquestación</span>
+                    </div>
+                </div>
+
+                <!-- Analytics Engineering -->
+                <div class="bg-white p-6 rounded-xl border border-gray-100">
+                    <div class="w-12 h-12 bg-cyan/10 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-navy mb-3">Analytics Engineering</h3>
+                    <p class="text-slate mb-4">
+                        Transformamos datos crudos en modelos analíticos confiables y documentados.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-navy/5 text-navy text-sm rounded-full">dbt</span>
+                        <span class="px-3 py-1 bg-navy/5 text-navy text-sm rounded-full">Data Modeling</span>
+                        <span class="px-3 py-1 bg-navy/5 text-navy text-sm rounded-full">Metrics Layer</span>
+                        <span class="px-3 py-1 bg-navy/5 text-navy text-sm rounded-full">Data Quality</span>
+                    </div>
+                </div>
+
+                <!-- Dashboards -->
+                <div class="bg-white p-6 rounded-xl border border-gray-100">
+                    <div class="w-12 h-12 bg-cyan/10 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-navy mb-3">Desarrollo de Dashboards</h3>
+                    <p class="text-slate mb-4">
+                        Creamos visualizaciones que permiten tomar decisiones informadas en tiempo real.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-navy/5 text-navy text-sm rounded-full">Power BI</span>
+                        <span class="px-3 py-1 bg-navy/5 text-navy text-sm rounded-full">Tableau</span>
+                        <span class="px-3 py-1 bg-navy/5 text-navy text-sm rounded-full">Looker</span>
+                        <span class="px-3 py-1 bg-navy/5 text-navy text-sm rounded-full">Metabase</span>
+                    </div>
+                </div>
+
+                <!-- Integración de IA -->
+                <div class="bg-white p-6 rounded-xl border border-gray-100">
+                    <div class="w-12 h-12 bg-cyan/10 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-navy mb-3">Integración de IA</h3>
+                    <p class="text-slate mb-4">
+                        Implementamos soluciones de inteligencia artificial que generan valor real para tu negocio.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-navy/5 text-navy text-sm rounded-full">LLMs</span>
+                        <span class="px-3 py-1 bg-navy/5 text-navy text-sm rounded-full">Agentes de IA</span>
+                        <span class="px-3 py-1 bg-navy/5 text-navy text-sm rounded-full">RAG</span>
+                        <span class="px-3 py-1 bg-navy/5 text-navy text-sm rounded-full">Automatización</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Tier 3: Managed Services -->
+    <section id="gestionados" class="py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="w-12 h-12 bg-cyan/10 rounded-xl flex items-center justify-center">
+                    <span class="text-cyan font-bold text-xl">3</span>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-navy">Servicios Gestionados</h2>
+                    <p class="text-slate">Soporte continuo para mantener tu plataforma de datos funcionando</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Soporte de Plataforma -->
+                <div class="bg-gradient-to-br from-navy to-slate-800 p-8 rounded-2xl text-white">
+                    <div class="w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Soporte de Plataforma de Datos</h3>
+                    <p class="text-gray-300 mb-6">
+                        Mantenimiento continuo de tu infraestructura de datos para que puedas enfocarte en lo que importa: tu negocio.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Monitoreo 24/7
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Optimización de rendimiento
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Gestión de incidentes
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Actualizaciones y parches
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Analytics como Servicio -->
+                <div class="bg-gradient-to-br from-cyan to-blue-600 p-8 rounded-2xl text-white">
+                    <div class="w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Analytics como Servicio</h3>
+                    <p class="text-white/80 mb-6">
+                        Un equipo de analytics dedicado sin la complejidad de contratar y gestionar talento interno.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Analistas dedicados
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Reportes periódicos
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Análisis ad-hoc
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Escalable según demanda
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Use Cases -->
+    <section class="py-20 px-4 bg-light">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-navy mb-4">Casos de Uso por Industria</h2>
+                <p class="text-slate max-w-2xl mx-auto">
+                    Ejemplos de cómo nuestros servicios generan valor en diferentes sectores.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl">
+                    <div class="text-3xl mb-4">🏨</div>
+                    <h3 class="text-lg font-semibold text-navy mb-2">Turismo</h3>
+                    <ul class="text-sm text-slate space-y-2">
+                        <li>• Predicción de demanda por temporada</li>
+                        <li>• Optimización de precios dinámicos</li>
+                        <li>• Análisis de satisfacción del cliente</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl">
+                    <div class="text-3xl mb-4">🏦</div>
+                    <h3 class="text-lg font-semibold text-navy mb-2">Banca y Finanzas</h3>
+                    <ul class="text-sm text-slate space-y-2">
+                        <li>• Scoring crediticio con ML</li>
+                        <li>• Detección de fraude</li>
+                        <li>• Reportes regulatorios automatizados</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl">
+                    <div class="text-3xl mb-4">🛒</div>
+                    <h3 class="text-lg font-semibold text-navy mb-2">Retail</h3>
+                    <ul class="text-sm text-slate space-y-2">
+                        <li>• Optimización de inventario</li>
+                        <li>• Segmentación de clientes</li>
+                        <li>• Recomendaciones personalizadas</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl">
+                    <div class="text-3xl mb-4">📡</div>
+                    <h3 class="text-lg font-semibold text-navy mb-2">Telecomunicaciones</h3>
+                    <ul class="text-sm text-slate space-y-2">
+                        <li>• Predicción de churn</li>
+                        <li>• Optimización de red</li>
+                        <li>• Análisis de uso y facturación</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl">
+                    <div class="text-3xl mb-4">🏭</div>
+                    <h3 class="text-lg font-semibold text-navy mb-2">Zonas Francas</h3>
+                    <ul class="text-sm text-slate space-y-2">
+                        <li>• Control de calidad predictivo</li>
+                        <li>• Optimización de producción</li>
+                        <li>• Gestión de cadena de suministro</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl">
+                    <div class="text-3xl mb-4">🏥</div>
+                    <h3 class="text-lg font-semibold text-navy mb-2">Salud</h3>
+                    <ul class="text-sm text-slate space-y-2">
+                        <li>• Analytics de pacientes</li>
+                        <li>• Optimización de citas</li>
+                        <li>• Gestión de inventario médico</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-4 bg-navy">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                ¿Listo para comenzar?
+            </h2>
+            <p class="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
+                Conversemos sobre cómo podemos ayudarte a alcanzar tus objetivos de datos e inteligencia artificial.
+            </p>
+            <a href="contacto.html" class="inline-block bg-cyan text-white px-8 py-4 rounded-lg font-medium hover:bg-cyan/90 transition-all">
+                Agenda una consulta gratuita
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy py-12 px-4 border-t border-white/10">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="md:col-span-2">
+                    <div class="text-2xl font-bold text-white mb-4">Datívus</div>
+                    <p class="text-gray-400 max-w-md">
+                        Consultoría de datos e inteligencia artificial. Transformamos datos en decisiones para empresas dominicanas.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Navegación</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-cyan transition-colors">Inicio</a></li>
+                        <li><a href="servicios.html" class="text-gray-400 hover:text-cyan transition-colors">Servicios</a></li>
+                        <li><a href="nosotros.html" class="text-gray-400 hover:text-cyan transition-colors">Nosotros</a></li>
+                        <li><a href="contacto.html" class="text-gray-400 hover:text-cyan transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contacto</h4>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="https://wa.me/18091234567" class="text-gray-400 hover:text-cyan transition-colors inline-flex items-center">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                </svg>
+                                WhatsApp
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:info@dativus.com" class="text-gray-400 hover:text-cyan transition-colors inline-flex items-center">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                                Email
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Datívus. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
