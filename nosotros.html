@@ -8,44 +8,51 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        navy: '#0f172a',
+                        dark: '#09090b',
+                        darker: '#030305',
                         cyan: '#06b6d4',
-                        slate: '#1e293b',
-                        light: '#f8fafc'
+                        purple: '#a855f7',
+                        slate: '#94a3b8'
                     },
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif']
+                        sans: ['Space Grotesk', 'sans-serif']
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="font-sans text-slate bg-white">
+<body class="font-sans bg-dark text-white antialiased">
+    <!-- Gradient orbs background -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-[20%] left-[50%] w-[600px] h-[600px] bg-cyan/10 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-[20%] right-[20%] w-[400px] h-[400px] bg-purple/10 rounded-full blur-[100px]"></div>
+    </div>
+
     <!-- Navigation -->
-    <nav class="fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="fixed w-full z-50 border-b border-white/5 bg-dark/80 backdrop-blur-xl">
+        <div class="max-w-6xl mx-auto px-6">
             <div class="flex justify-between items-center h-16">
-                <a href="index.html" class="text-2xl font-bold text-navy">
-                    Datívus
+                <a href="index.html" class="text-xl font-bold tracking-tight">
+                    Datívus<span class="text-cyan">.</span>
                 </a>
 
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-slate hover:text-cyan transition-colors">Inicio</a>
-                    <a href="servicios.html" class="text-slate hover:text-cyan transition-colors">Servicios</a>
-                    <a href="nosotros.html" class="text-navy font-medium hover:text-cyan transition-colors">Nosotros</a>
-                    <a href="contacto.html" class="bg-cyan text-white px-5 py-2 rounded-lg hover:bg-cyan/90 transition-colors">Contacto</a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-slate text-sm hover:text-cyan transition-colors">Inicio</a>
+                    <a href="servicios.html" class="text-slate text-sm hover:text-cyan transition-colors">Servicios</a>
+                    <a href="nosotros.html" class="text-white text-sm hover:text-cyan transition-colors">Nosotros</a>
+                    <a href="contacto.html" class="bg-white text-dark px-4 py-2 rounded-full text-sm font-medium hover:bg-cyan hover:text-dark transition-all">
+                        Hablemos
+                    </a>
                 </div>
 
-                <!-- Mobile Menu Button -->
                 <button id="mobile-menu-btn" class="md:hidden p-2" aria-label="Menú">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -54,64 +61,74 @@
             </div>
         </div>
 
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
-            <div class="px-4 py-4 space-y-3">
+        <div id="mobile-menu" class="hidden md:hidden border-t border-white/5 bg-dark/95 backdrop-blur-xl">
+            <div class="px-6 py-4 space-y-4">
                 <a href="index.html" class="block text-slate hover:text-cyan">Inicio</a>
                 <a href="servicios.html" class="block text-slate hover:text-cyan">Servicios</a>
-                <a href="nosotros.html" class="block text-navy font-medium">Nosotros</a>
-                <a href="contacto.html" class="block bg-cyan text-white px-4 py-2 rounded-lg text-center">Contacto</a>
+                <a href="nosotros.html" class="block text-white">Nosotros</a>
+                <a href="contacto.html" class="block bg-white text-dark px-4 py-2 rounded-full text-center font-medium">Hablemos</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="pt-32 pb-16 px-4 bg-gradient-to-br from-navy to-slate-800">
-        <div class="max-w-6xl mx-auto text-center">
-            <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
-                Sobre Nosotros
+    <!-- Hero -->
+    <section class="relative pt-32 pb-20 px-6">
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6">
+                Nosotros
             </h1>
-            <p class="text-xl text-gray-300 max-w-2xl mx-auto">
-                Experiencia internacional, impacto local. Llevamos prácticas de datos de clase mundial a empresas dominicanas.
+            <p class="text-xl text-slate max-w-lg mx-auto">
+                Experiencia internacional. Impacto local.
             </p>
         </div>
     </section>
 
-    <!-- Story Section -->
-    <section class="py-20 px-4">
+    <!-- Story -->
+    <section class="relative py-20 px-6">
         <div class="max-w-6xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
                 <div>
-                    <h2 class="text-3xl font-bold text-navy mb-6">Nuestra Historia</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-8">
+                        La historia<br><span class="text-cyan">corta</span>
+                    </h2>
                     <div class="space-y-4 text-slate">
                         <p>
-                            Datívus nace de una convicción: las empresas dominicanas merecen acceso a las mismas capacidades de datos e inteligencia artificial que las grandes corporaciones internacionales.
+                            8 años construyendo pipelines de datos. 4 años con empresas de tecnología en Estados Unidos. Ahora, en República Dominicana.
                         </p>
                         <p>
-                            Con más de 8 años de experiencia en ingeniería de datos y 4 años trabajando con empresas de tecnología en Estados Unidos, hemos visto de primera mano cómo los datos bien gestionados transforman negocios.
-                        </p>
-                        <p>
-                            Ahora, traemos esa experiencia a casa. Entendemos el contexto local, los desafíos únicos del mercado dominicano, y cómo adaptar las mejores prácticas internacionales a nuestra realidad.
+                            La idea es simple: las empresas dominicanas merecen las mismas capacidades de datos que las grandes corporaciones. Sin el precio de las grandes consultoras.
                         </p>
                     </div>
                 </div>
-                <div class="bg-light rounded-2xl p-8">
-                    <div class="space-y-6">
-                        <div class="timeline-item pb-6">
-                            <h3 class="font-semibold text-navy">8+ años en datos</h3>
-                            <p class="text-sm text-slate">Experiencia en ingeniería de datos, analytics y arquitectura de plataformas</p>
+
+                <div class="space-y-6">
+                    <div class="p-6 rounded-xl border border-white/10 bg-white/[0.02]">
+                        <div class="flex items-center gap-4">
+                            <div class="text-3xl font-bold text-cyan">8+</div>
+                            <div>
+                                <div class="font-medium">Años en datos</div>
+                                <div class="text-sm text-slate">Ingeniería, analytics, arquitectura</div>
+                            </div>
                         </div>
-                        <div class="timeline-item pb-6">
-                            <h3 class="font-semibold text-navy">4 años con empresas de EE.UU.</h3>
-                            <p class="text-sm text-slate">Trabajando con estándares y metodologías de clase mundial</p>
+                    </div>
+
+                    <div class="p-6 rounded-xl border border-white/10 bg-white/[0.02]">
+                        <div class="flex items-center gap-4">
+                            <div class="text-3xl font-bold text-purple">4</div>
+                            <div>
+                                <div class="font-medium">Años en EE.UU.</div>
+                                <div class="text-sm text-slate">Metodologías de clase mundial</div>
+                            </div>
                         </div>
-                        <div class="timeline-item pb-6">
-                            <h3 class="font-semibold text-navy">Implementaciones de IA activas</h3>
-                            <p class="text-sm text-slate">Experiencia práctica con LLMs, agentes de IA y automatización</p>
-                        </div>
-                        <div class="timeline-item">
-                            <h3 class="font-semibold text-navy">Enfoque en República Dominicana</h3>
-                            <p class="text-sm text-slate">Comprometidos con el crecimiento del ecosistema tech local</p>
+                    </div>
+
+                    <div class="p-6 rounded-xl border border-white/10 bg-white/[0.02]">
+                        <div class="flex items-center gap-4">
+                            <div class="text-3xl font-bold text-cyan">IA</div>
+                            <div>
+                                <div class="font-medium">En producción</div>
+                                <div class="text-sm text-slate">LLMs, agentes, automatización</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -119,128 +136,41 @@
         </div>
     </section>
 
-    <!-- Mission & Vision -->
-    <section class="py-20 px-4 bg-light">
+    <!-- Why Us -->
+    <section class="relative py-20 px-6 border-y border-white/5">
         <div class="max-w-6xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white p-8 rounded-2xl">
-                    <div class="w-14 h-14 bg-cyan/10 rounded-xl flex items-center justify-center mb-6">
-                        <svg class="w-7 h-7 text-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-navy mb-4">Nuestra Misión</h3>
-                    <p class="text-slate">
-                        Democratizar el acceso a capacidades avanzadas de datos e inteligencia artificial para empresas dominicanas, permitiéndoles competir y crecer en la economía digital global.
-                    </p>
-                </div>
-
-                <div class="bg-white p-8 rounded-2xl">
-                    <div class="w-14 h-14 bg-cyan/10 rounded-xl flex items-center justify-center mb-6">
-                        <svg class="w-7 h-7 text-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-navy mb-4">Nuestra Visión</h3>
-                    <p class="text-slate">
-                        Ser el socio de confianza que impulsa la transformación digital de las empresas dominicanas, creando un ecosistema donde los datos generen valor real y sostenible.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Differentiators -->
-    <section class="py-20 px-4">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-navy mb-4">¿Por qué Datívus?</h2>
-                <p class="text-slate max-w-2xl mx-auto">
-                    Lo que nos diferencia en el mercado dominicano.
-                </p>
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">¿Por qué Datívus?</h2>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-cyan/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
+                    <div class="w-16 h-16 rounded-full border border-cyan/30 bg-cyan/10 flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl">🌎</span>
                     </div>
-                    <h3 class="text-xl font-semibold text-navy mb-3">Experiencia Internacional</h3>
-                    <p class="text-slate">
-                        Metodologías y estándares probados en empresas de tecnología de Estados Unidos, adaptados al contexto local.
+                    <h3 class="text-lg font-semibold mb-2">Experiencia Global</h3>
+                    <p class="text-slate text-sm">
+                        Estándares de Silicon Valley aplicados al contexto local.
                     </p>
                 </div>
 
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-cyan/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                        </svg>
+                    <div class="w-16 h-16 rounded-full border border-purple/30 bg-purple/10 flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl">⚡</span>
                     </div>
-                    <h3 class="text-xl font-semibold text-navy mb-3">Enfoque Práctico</h3>
-                    <p class="text-slate">
-                        No solo estrategia—implementamos soluciones reales que generan valor desde el primer día.
+                    <h3 class="text-lg font-semibold mb-2">Enfoque Práctico</h3>
+                    <p class="text-slate text-sm">
+                        No solo estrategia. Implementamos y entregamos valor real.
                     </p>
                 </div>
 
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-cyan/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-                        </svg>
+                    <div class="w-16 h-16 rounded-full border border-cyan/30 bg-cyan/10 flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl">🇩🇴</span>
                     </div>
-                    <h3 class="text-xl font-semibold text-navy mb-3">Compromiso Local</h3>
-                    <p class="text-slate">
-                        Entendemos el mercado dominicano, sus desafíos únicos y oportunidades de crecimiento.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Values -->
-    <section class="py-20 px-4 bg-navy">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-white mb-4">Nuestros Valores</h2>
-                <p class="text-gray-300 max-w-2xl mx-auto">
-                    Los principios que guían todo lo que hacemos.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-4 gap-6">
-                <div class="bg-white/5 p-6 rounded-xl text-center">
-                    <div class="text-3xl mb-4">🎯</div>
-                    <h3 class="text-white font-semibold mb-2">Resultados</h3>
-                    <p class="text-gray-400 text-sm">
-                        Nos medimos por el impacto real que generamos en tu negocio.
-                    </p>
-                </div>
-
-                <div class="bg-white/5 p-6 rounded-xl text-center">
-                    <div class="text-3xl mb-4">🤝</div>
-                    <h3 class="text-white font-semibold mb-2">Transparencia</h3>
-                    <p class="text-gray-400 text-sm">
-                        Comunicación clara y honesta en cada etapa del proyecto.
-                    </p>
-                </div>
-
-                <div class="bg-white/5 p-6 rounded-xl text-center">
-                    <div class="text-3xl mb-4">📚</div>
-                    <h3 class="text-white font-semibold mb-2">Aprendizaje</h3>
-                    <p class="text-gray-400 text-sm">
-                        Siempre actualizados con las últimas tecnologías y metodologías.
-                    </p>
-                </div>
-
-                <div class="bg-white/5 p-6 rounded-xl text-center">
-                    <div class="text-3xl mb-4">⚡</div>
-                    <h3 class="text-white font-semibold mb-2">Agilidad</h3>
-                    <p class="text-gray-400 text-sm">
-                        Iteramos rápido, entregamos valor de forma incremental.
+                    <h3 class="text-lg font-semibold mb-2">Compromiso Local</h3>
+                    <p class="text-slate text-sm">
+                        Entendemos el mercado, los desafíos y las oportunidades de RD.
                     </p>
                 </div>
             </div>
@@ -248,114 +178,89 @@
     </section>
 
     <!-- Tech Stack -->
-    <section class="py-20 px-4">
+    <section class="relative py-20 px-6">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-navy mb-4">Tecnologías que Dominamos</h2>
-                <p class="text-slate max-w-2xl mx-auto">
-                    Herramientas modernas para soluciones de vanguardia.
-                </p>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4">Stack Tecnológico</h2>
+                <p class="text-slate">Las herramientas que usamos día a día.</p>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                <div class="bg-light p-4 rounded-lg text-center">
-                    <span class="text-sm font-medium text-navy">Python</span>
+            <div class="flex flex-wrap justify-center gap-3">
+                <span class="px-4 py-2 rounded-full border border-white/10 bg-white/[0.02] text-sm">Python</span>
+                <span class="px-4 py-2 rounded-full border border-white/10 bg-white/[0.02] text-sm">SQL</span>
+                <span class="px-4 py-2 rounded-full border border-white/10 bg-white/[0.02] text-sm">dbt</span>
+                <span class="px-4 py-2 rounded-full border border-white/10 bg-white/[0.02] text-sm">Airflow</span>
+                <span class="px-4 py-2 rounded-full border border-white/10 bg-white/[0.02] text-sm">Snowflake</span>
+                <span class="px-4 py-2 rounded-full border border-white/10 bg-white/[0.02] text-sm">BigQuery</span>
+                <span class="px-4 py-2 rounded-full border border-white/10 bg-white/[0.02] text-sm">AWS</span>
+                <span class="px-4 py-2 rounded-full border border-white/10 bg-white/[0.02] text-sm">GCP</span>
+                <span class="px-4 py-2 rounded-full border border-white/10 bg-white/[0.02] text-sm">Spark</span>
+                <span class="px-4 py-2 rounded-full border border-white/10 bg-white/[0.02] text-sm">Power BI</span>
+                <span class="px-4 py-2 rounded-full border border-white/10 bg-white/[0.02] text-sm">Tableau</span>
+                <span class="px-4 py-2 rounded-full border border-cyan/30 bg-cyan/10 text-sm text-cyan">OpenAI</span>
+                <span class="px-4 py-2 rounded-full border border-purple/30 bg-purple/10 text-sm text-purple">Claude</span>
+                <span class="px-4 py-2 rounded-full border border-white/10 bg-white/[0.02] text-sm">LangChain</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values -->
+    <section class="relative py-20 px-6 border-t border-white/5">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4">Valores</h2>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="p-6 rounded-xl border border-white/10 bg-white/[0.02] text-center">
+                    <div class="text-2xl mb-3">🎯</div>
+                    <div class="font-medium text-sm">Resultados</div>
                 </div>
-                <div class="bg-light p-4 rounded-lg text-center">
-                    <span class="text-sm font-medium text-navy">SQL</span>
+                <div class="p-6 rounded-xl border border-white/10 bg-white/[0.02] text-center">
+                    <div class="text-2xl mb-3">🤝</div>
+                    <div class="font-medium text-sm">Transparencia</div>
                 </div>
-                <div class="bg-light p-4 rounded-lg text-center">
-                    <span class="text-sm font-medium text-navy">dbt</span>
+                <div class="p-6 rounded-xl border border-white/10 bg-white/[0.02] text-center">
+                    <div class="text-2xl mb-3">📚</div>
+                    <div class="font-medium text-sm">Aprendizaje</div>
                 </div>
-                <div class="bg-light p-4 rounded-lg text-center">
-                    <span class="text-sm font-medium text-navy">Airflow</span>
-                </div>
-                <div class="bg-light p-4 rounded-lg text-center">
-                    <span class="text-sm font-medium text-navy">Snowflake</span>
-                </div>
-                <div class="bg-light p-4 rounded-lg text-center">
-                    <span class="text-sm font-medium text-navy">BigQuery</span>
-                </div>
-                <div class="bg-light p-4 rounded-lg text-center">
-                    <span class="text-sm font-medium text-navy">AWS</span>
-                </div>
-                <div class="bg-light p-4 rounded-lg text-center">
-                    <span class="text-sm font-medium text-navy">GCP</span>
-                </div>
-                <div class="bg-light p-4 rounded-lg text-center">
-                    <span class="text-sm font-medium text-navy">Spark</span>
-                </div>
-                <div class="bg-light p-4 rounded-lg text-center">
-                    <span class="text-sm font-medium text-navy">Power BI</span>
-                </div>
-                <div class="bg-light p-4 rounded-lg text-center">
-                    <span class="text-sm font-medium text-navy">Tableau</span>
-                </div>
-                <div class="bg-light p-4 rounded-lg text-center">
-                    <span class="text-sm font-medium text-navy">OpenAI/LLMs</span>
+                <div class="p-6 rounded-xl border border-white/10 bg-white/[0.02] text-center">
+                    <div class="text-2xl mb-3">⚡</div>
+                    <div class="font-medium text-sm">Agilidad</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="py-20 px-4 bg-light">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-navy mb-6">
-                ¿Listo para conocernos?
+    <!-- CTA -->
+    <section class="relative py-32 px-6">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                ¿Conectamos?
             </h2>
-            <p class="text-slate text-lg mb-8 max-w-2xl mx-auto">
-                Conversemos sobre cómo podemos ayudar a tu empresa a aprovechar el poder de los datos.
+            <p class="text-slate text-lg mb-10">
+                Una llamada de 30 minutos. Sin compromiso.
             </p>
-            <a href="contacto.html" class="inline-block bg-cyan text-white px-8 py-4 rounded-lg font-medium hover:bg-cyan/90 transition-all">
-                Agenda una consulta gratuita
+            <a href="contacto.html" class="group bg-gradient-to-r from-cyan to-purple text-dark px-8 py-4 rounded-full font-medium hover:opacity-90 transition-all inline-flex items-center gap-2">
+                Agenda tu consulta
+                <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
             </a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-navy py-12 px-4">
+    <footer class="border-t border-white/5 py-12 px-6">
         <div class="max-w-6xl mx-auto">
-            <div class="grid md:grid-cols-4 gap-8 mb-8">
-                <div class="md:col-span-2">
-                    <div class="text-2xl font-bold text-white mb-4">Datívus</div>
-                    <p class="text-gray-400 max-w-md">
-                        Consultoría de datos e inteligencia artificial. Transformamos datos en decisiones para empresas dominicanas.
-                    </p>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-xl font-bold">Datívus<span class="text-cyan">.</span></div>
+                <div class="flex items-center gap-8 text-sm text-slate">
+                    <a href="servicios.html" class="hover:text-white transition-colors">Servicios</a>
+                    <a href="nosotros.html" class="hover:text-white transition-colors">Nosotros</a>
+                    <a href="contacto.html" class="hover:text-white transition-colors">Contacto</a>
                 </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">Navegación</h4>
-                    <ul class="space-y-2">
-                        <li><a href="index.html" class="text-gray-400 hover:text-cyan transition-colors">Inicio</a></li>
-                        <li><a href="servicios.html" class="text-gray-400 hover:text-cyan transition-colors">Servicios</a></li>
-                        <li><a href="nosotros.html" class="text-gray-400 hover:text-cyan transition-colors">Nosotros</a></li>
-                        <li><a href="contacto.html" class="text-gray-400 hover:text-cyan transition-colors">Contacto</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">Contacto</h4>
-                    <ul class="space-y-2">
-                        <li>
-                            <a href="https://wa.me/18091234567" class="text-gray-400 hover:text-cyan transition-colors inline-flex items-center">
-                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                                </svg>
-                                WhatsApp
-                            </a>
-                        </li>
-                        <li>
-                            <a href="mailto:info@dativus.com" class="text-gray-400 hover:text-cyan transition-colors inline-flex items-center">
-                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                                </svg>
-                                Email
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-white/10 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 Datívus. Todos los derechos reservados.</p>
+                <div class="text-sm text-slate">© 2025 Datívus</div>
             </div>
         </div>
     </footer>
