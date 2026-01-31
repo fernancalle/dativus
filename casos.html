@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Casos de uso reales de datos e IA por industria en República Dominicana.">
+    <title>Casos de Uso | Datívus</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#09090b',
+                        cyan: '#06b6d4',
+                        purple: '#a855f7',
+                        slate: '#71717a',
+                        muted: '#a1a1aa'
+                    },
+                    fontFamily: {
+                        display: ['Syne', 'sans-serif'],
+                        sans: ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-dark text-white antialiased overflow-x-hidden">
+    <!-- Gradient background -->
+    <div class="fixed inset-0 pointer-events-none">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-gradient-to-b from-cyan/8 to-transparent rounded-full blur-3xl"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 border-b border-white/5 bg-dark/60 backdrop-blur-2xl">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="font-display text-xl font-bold tracking-tight">
+                    datívus
+                </a>
+
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-muted text-sm hover:text-white transition-all duration-300">Inicio</a>
+                    <a href="servicios.html" class="text-muted text-sm hover:text-white transition-all duration-300">Servicios</a>
+                    <a href="casos.html" class="text-white text-sm">Casos</a>
+                    <a href="nosotros.html" class="text-muted text-sm hover:text-white transition-all duration-300">Nosotros</a>
+                    <a href="contacto.html" class="bg-white text-dark px-4 py-2 rounded-full text-sm font-medium hover:bg-cyan transition-all duration-300">
+                        Hablemos
+                    </a>
+                </div>
+
+                <button id="mobile-menu-btn" class="md:hidden p-2" aria-label="Menú">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden border-t border-white/5 bg-dark/95 backdrop-blur-2xl">
+            <div class="px-6 py-4 space-y-4">
+                <a href="index.html" class="block text-muted">Inicio</a>
+                <a href="servicios.html" class="block text-muted">Servicios</a>
+                <a href="casos.html" class="block text-white">Casos</a>
+                <a href="nosotros.html" class="block text-muted">Nosotros</a>
+                <a href="contacto.html" class="block bg-white text-dark px-4 py-2 rounded-full text-center font-medium">Hablemos</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative pt-32 pb-20 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="max-w-2xl">
+                <p class="text-cyan text-sm font-medium tracking-wider uppercase mb-4 animate-fade-in">Por industria</p>
+                <h1 class="font-display text-4xl md:text-6xl font-bold tracking-tight leading-[1.1] mb-6 animate-fade-in-up">
+                    Casos de uso
+                </h1>
+                <p class="text-muted text-lg leading-relaxed animate-fade-in-up delay-100">
+                    Soluciones concretas. Nada de ciencia ficción. Cosas que puedes implementar hoy con los datos que ya tienes.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tourism -->
+    <section class="relative py-16 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid md:grid-cols-12 gap-8 items-start">
+                <div class="md:col-span-4">
+                    <div class="sticky top-24">
+                        <span class="text-6xl mb-4 block">🏨</span>
+                        <h2 class="font-display text-2xl font-bold mb-2">Turismo</h2>
+                        <p class="text-muted text-sm">Hoteles, resorts, tour operadores</p>
+                    </div>
+                </div>
+                <div class="md:col-span-8 space-y-6">
+                    <div class="p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:border-cyan/20 transition-all duration-500">
+                        <h3 class="font-semibold mb-2">Ocupación por temporada</h3>
+                        <p class="text-muted text-sm mb-4">
+                            Un Excel con el histórico de reservas de los últimos 3 años. Lo convertimos en un modelo que predice ocupación por semana. Sin magia—regresión básica que funciona.
+                        </p>
+                        <div class="flex items-center gap-4 text-xs text-slate">
+                            <span class="px-2 py-1 rounded bg-white/5">Excel → Dashboard</span>
+                            <span class="px-2 py-1 rounded bg-white/5">2-3 semanas</span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:border-cyan/20 transition-all duration-500">
+                        <h3 class="font-semibold mb-2">Reviews consolidados</h3>
+                        <p class="text-muted text-sm mb-4">
+                            TripAdvisor, Google, Booking... todos dispersos. Los unificamos en un solo lugar, categorizamos quejas automáticamente, y te decimos qué arreglar primero.
+                        </p>
+                        <div class="flex items-center gap-4 text-xs text-slate">
+                            <span class="px-2 py-1 rounded bg-white/5">Scraping + NLP básico</span>
+                            <span class="px-2 py-1 rounded bg-white/5">1-2 semanas</span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:border-cyan/20 transition-all duration-500">
+                        <h3 class="font-semibold mb-2">Reporte diario automático</h3>
+                        <p class="text-muted text-sm mb-4">
+                            Cada mañana a las 7am, un email con ocupación actual, llegadas del día, revenue vs. meta, y alertas de overbooking. Cero clics.
+                        </p>
+                        <div class="flex items-center gap-4 text-xs text-slate">
+                            <span class="px-2 py-1 rounded bg-white/5">Automatización</span>
+                            <span class="px-2 py-1 rounded bg-white/5">1 semana</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banking -->
+    <section class="relative py-16 px-6 border-t border-white/5">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid md:grid-cols-12 gap-8 items-start">
+                <div class="md:col-span-4">
+                    <div class="sticky top-24">
+                        <span class="text-6xl mb-4 block">🏦</span>
+                        <h2 class="font-display text-2xl font-bold mb-2">Banca</h2>
+                        <p class="text-muted text-sm">Bancos, cooperativas, fintech</p>
+                    </div>
+                </div>
+                <div class="md:col-span-8 space-y-6">
+                    <div class="p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:border-purple/20 transition-all duration-500">
+                        <h3 class="font-semibold mb-2">Dashboard de cartera</h3>
+                        <p class="text-muted text-sm mb-4">
+                            Tu cartera de préstamos en un solo lugar. Morosidad por sucursal, por oficial, por producto. Drill-down hasta el cliente. Actualizado cada noche.
+                        </p>
+                        <div class="flex items-center gap-4 text-xs text-slate">
+                            <span class="px-2 py-1 rounded bg-white/5">Core bancario → BI</span>
+                            <span class="px-2 py-1 rounded bg-white/5">4-6 semanas</span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:border-purple/20 transition-all duration-500">
+                        <h3 class="font-semibold mb-2">Alertas de mora temprana</h3>
+                        <p class="text-muted text-sm mb-4">
+                            Cuando un cliente empieza a pagar tarde (pero antes de los 30 días), te avisamos. Lista priorizada para que cobranzas llame a los correctos primero.
+                        </p>
+                        <div class="flex items-center gap-4 text-xs text-slate">
+                            <span class="px-2 py-1 rounded bg-white/5">Reglas + modelo simple</span>
+                            <span class="px-2 py-1 rounded bg-white/5">3-4 semanas</span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:border-purple/20 transition-all duration-500">
+                        <h3 class="font-semibold mb-2">Reportes regulatorios</h3>
+                        <p class="text-muted text-sm mb-4">
+                            Los reportes para la SIB que hoy toman 3 días, automatizados. Mismo formato, misma lógica, pero generados en minutos.
+                        </p>
+                        <div class="flex items-center gap-4 text-xs text-slate">
+                            <span class="px-2 py-1 rounded bg-white/5">ETL + templates</span>
+                            <span class="px-2 py-1 rounded bg-white/5">4-8 semanas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Retail -->
+    <section class="relative py-16 px-6 border-t border-white/5">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid md:grid-cols-12 gap-8 items-start">
+                <div class="md:col-span-4">
+                    <div class="sticky top-24">
+                        <span class="text-6xl mb-4 block">🛒</span>
+                        <h2 class="font-display text-2xl font-bold mb-2">Retail</h2>
+                        <p class="text-muted text-sm">Supermercados, tiendas, e-commerce</p>
+                    </div>
+                </div>
+                <div class="md:col-span-8 space-y-6">
+                    <div class="p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:border-cyan/20 transition-all duration-500">
+                        <h3 class="font-semibold mb-2">Inventario inteligente</h3>
+                        <p class="text-muted text-sm mb-4">
+                            ¿Cuánto pedir de cada producto? Basado en ventas históricas, días de la semana, y tiempo de entrega del proveedor. Adiós al "ojo por ciento".
+                        </p>
+                        <div class="flex items-center gap-4 text-xs text-slate">
+                            <span class="px-2 py-1 rounded bg-white/5">POS → modelo de demanda</span>
+                            <span class="px-2 py-1 rounded bg-white/5">4-6 semanas</span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:border-cyan/20 transition-all duration-500">
+                        <h3 class="font-semibold mb-2">Clientes que se van</h3>
+                        <p class="text-muted text-sm mb-4">
+                            Detectamos clientes frecuentes que dejaron de comprar. Lista semanal con nombre, última compra, y productos favoritos. Tú decides cómo recuperarlos.
+                        </p>
+                        <div class="flex items-center gap-4 text-xs text-slate">
+                            <span class="px-2 py-1 rounded bg-white/5">Análisis de frecuencia</span>
+                            <span class="px-2 py-1 rounded bg-white/5">2-3 semanas</span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:border-cyan/20 transition-all duration-500">
+                        <h3 class="font-semibold mb-2">Ventas por hora</h3>
+                        <p class="text-muted text-sm mb-4">
+                            Dashboard que muestra picos de venta por hora y día. Para que sepas cuándo necesitas más cajeros y cuándo puedes reducir personal.
+                        </p>
+                        <div class="flex items-center gap-4 text-xs text-slate">
+                            <span class="px-2 py-1 rounded bg-white/5">POS → visualización</span>
+                            <span class="px-2 py-1 rounded bg-white/5">1-2 semanas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Telecom -->
+    <section class="relative py-16 px-6 border-t border-white/5">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid md:grid-cols-12 gap-8 items-start">
+                <div class="md:col-span-4">
+                    <div class="sticky top-24">
+                        <span class="text-6xl mb-4 block">📡</span>
+                        <h2 class="font-display text-2xl font-bold mb-2">Telecom</h2>
+                        <p class="text-muted text-sm">Operadores, ISPs, cable</p>
+                    </div>
+                </div>
+                <div class="md:col-span-8 space-y-6">
+                    <div class="p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:border-purple/20 transition-all duration-500">
+                        <h3 class="font-semibold mb-2">Clientes en riesgo</h3>
+                        <p class="text-muted text-sm mb-4">
+                            Combinamos llamadas a soporte + pagos tardíos + uso del servicio. Los que tienen las 3 señales, probablemente se van. Lista priorizada para retención.
+                        </p>
+                        <div class="flex items-center gap-4 text-xs text-slate">
+                            <span class="px-2 py-1 rounded bg-white/5">Scoring simple</span>
+                            <span class="px-2 py-1 rounded bg-white/5">3-4 semanas</span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:border-purple/20 transition-all duration-500">
+                        <h3 class="font-semibold mb-2">Mapa de cobertura real</h3>
+                        <p class="text-muted text-sm mb-4">
+                            No el mapa de marketing—el real. Basado en tickets de soporte por zona. Para que sepas dónde invertir en infraestructura primero.
+                        </p>
+                        <div class="flex items-center gap-4 text-xs text-slate">
+                            <span class="px-2 py-1 rounded bg-white/5">Geolocalización + tickets</span>
+                            <span class="px-2 py-1 rounded bg-white/5">2-3 semanas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Manufacturing -->
+    <section class="relative py-16 px-6 border-t border-white/5">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid md:grid-cols-12 gap-8 items-start">
+                <div class="md:col-span-4">
+                    <div class="sticky top-24">
+                        <span class="text-6xl mb-4 block">🏭</span>
+                        <h2 class="font-display text-2xl font-bold mb-2">Manufactura</h2>
+                        <p class="text-muted text-sm">Zonas francas, fábricas, logística</p>
+                    </div>
+                </div>
+                <div class="md:col-span-8 space-y-6">
+                    <div class="p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:border-cyan/20 transition-all duration-500">
+                        <h3 class="font-semibold mb-2">OEE en tiempo real</h3>
+                        <p class="text-muted text-sm mb-4">
+                            Disponibilidad × Rendimiento × Calidad. En una pantalla en el piso de producción. Actualizado cada hora. Sin sensores caros—datos del ERP que ya tienes.
+                        </p>
+                        <div class="flex items-center gap-4 text-xs text-slate">
+                            <span class="px-2 py-1 rounded bg-white/5">ERP → dashboard</span>
+                            <span class="px-2 py-1 rounded bg-white/5">3-4 semanas</span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:border-cyan/20 transition-all duration-500">
+                        <h3 class="font-semibold mb-2">Trazabilidad de lotes</h3>
+                        <p class="text-muted text-sm mb-4">
+                            ¿De dónde vino esta materia prima? ¿Qué productos se hicieron con ella? Respuestas en segundos, no en horas buscando en papeles.
+                        </p>
+                        <div class="flex items-center gap-4 text-xs text-slate">
+                            <span class="px-2 py-1 rounded bg-white/5">Base de datos + búsqueda</span>
+                            <span class="px-2 py-1 rounded bg-white/5">4-6 semanas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Healthcare -->
+    <section class="relative py-16 px-6 border-t border-white/5">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid md:grid-cols-12 gap-8 items-start">
+                <div class="md:col-span-4">
+                    <div class="sticky top-24">
+                        <span class="text-6xl mb-4 block">🏥</span>
+                        <h2 class="font-display text-2xl font-bold mb-2">Salud</h2>
+                        <p class="text-muted text-sm">Clínicas, laboratorios, farmacias</p>
+                    </div>
+                </div>
+                <div class="md:col-span-8 space-y-6">
+                    <div class="p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:border-purple/20 transition-all duration-500">
+                        <h3 class="font-semibold mb-2">No-shows de citas</h3>
+                        <p class="text-muted text-sm mb-4">
+                            Pacientes que agendan pero no llegan. Los identificamos por patrón histórico y enviamos recordatorios extra solo a los de alto riesgo.
+                        </p>
+                        <div class="flex items-center gap-4 text-xs text-slate">
+                            <span class="px-2 py-1 rounded bg-white/5">Análisis + automatización</span>
+                            <span class="px-2 py-1 rounded bg-white/5">2-3 semanas</span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:border-purple/20 transition-all duration-500">
+                        <h3 class="font-semibold mb-2">Inventario de medicamentos</h3>
+                        <p class="text-muted text-sm mb-4">
+                            Alertas cuando un medicamento está por vencer o por agotarse. Basado en consumo promedio, no en intuición.
+                        </p>
+                        <div class="flex items-center gap-4 text-xs text-slate">
+                            <span class="px-2 py-1 rounded bg-white/5">Sistema actual → alertas</span>
+                            <span class="px-2 py-1 rounded bg-white/5">2-3 semanas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="relative py-24 px-6 border-t border-white/5">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">
+                ¿Algo parecido a lo tuyo?
+            </h2>
+            <p class="text-muted mb-8">
+                Cuéntanos tu situación. En 30 minutos te decimos si tiene sentido trabajar juntos.
+            </p>
+            <a href="contacto.html" class="group inline-flex items-center gap-2 bg-white text-dark px-6 py-3 rounded-full font-medium hover:bg-cyan transition-all duration-300">
+                Conversemos
+                <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 py-12 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="font-display text-lg font-bold">datívus</div>
+                <div class="flex items-center gap-8 text-sm text-muted">
+                    <a href="servicios.html" class="hover:text-white transition-colors duration-300">Servicios</a>
+                    <a href="casos.html" class="hover:text-white transition-colors duration-300">Casos</a>
+                    <a href="nosotros.html" class="hover:text-white transition-colors duration-300">Nosotros</a>
+                    <a href="contacto.html" class="hover:text-white transition-colors duration-300">Contacto</a>
+                </div>
+                <div class="text-sm text-slate">© 2025</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

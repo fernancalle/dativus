@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Datívus - Consultoría de datos e IA para empresas dominicanas. Transformamos datos en decisiones.">
-    <title>Datívus | Datos · IA · Resultados</title>
+    <meta name="description" content="Datívus — Consultoría de datos e IA. Hacemos que tus datos trabajen.">
+    <title>Datívus — Datos que trabajan</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <script>
         tailwind.config = {
@@ -16,225 +16,206 @@
                 extend: {
                     colors: {
                         dark: '#09090b',
-                        darker: '#030305',
                         cyan: '#06b6d4',
                         purple: '#a855f7',
-                        slate: '#94a3b8'
+                        slate: '#71717a',
+                        muted: '#a1a1aa'
                     },
                     fontFamily: {
-                        sans: ['Space Grotesk', 'sans-serif']
+                        display: ['Syne', 'sans-serif'],
+                        sans: ['Outfit', 'sans-serif']
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="font-sans bg-dark text-white antialiased">
-    <!-- Gradient orbs background -->
-    <div class="fixed inset-0 overflow-hidden pointer-events-none">
-        <div class="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] bg-cyan/20 rounded-full blur-[120px]"></div>
-        <div class="absolute bottom-[-20%] right-[-10%] w-[600px] h-[600px] bg-purple/20 rounded-full blur-[120px]"></div>
+<body class="font-sans bg-dark text-white antialiased overflow-x-hidden">
+    <!-- Gradient background -->
+    <div class="fixed inset-0 pointer-events-none">
+        <div class="absolute top-[-20%] left-[20%] w-[600px] h-[600px] bg-cyan/10 rounded-full blur-[150px] animate-float-slow"></div>
+        <div class="absolute bottom-[-10%] right-[10%] w-[500px] h-[500px] bg-purple/10 rounded-full blur-[150px] animate-float-slow-delayed"></div>
     </div>
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 border-b border-white/5 bg-dark/80 backdrop-blur-xl">
-        <div class="max-w-6xl mx-auto px-6">
+    <nav class="fixed w-full z-50 border-b border-white/5 bg-dark/60 backdrop-blur-2xl">
+        <div class="max-w-5xl mx-auto px-6">
             <div class="flex justify-between items-center h-16">
-                <a href="index.html" class="text-xl font-bold tracking-tight">
-                    Datívus<span class="text-cyan">.</span>
+                <a href="index.html" class="font-display text-xl font-bold tracking-tight">
+                    datívus
                 </a>
 
                 <div class="hidden md:flex items-center gap-8">
-                    <a href="index.html" class="text-white text-sm hover:text-cyan transition-colors">Inicio</a>
-                    <a href="servicios.html" class="text-slate text-sm hover:text-cyan transition-colors">Servicios</a>
-                    <a href="nosotros.html" class="text-slate text-sm hover:text-cyan transition-colors">Nosotros</a>
-                    <a href="contacto.html" class="bg-white text-dark px-4 py-2 rounded-full text-sm font-medium hover:bg-cyan hover:text-dark transition-all">
+                    <a href="index.html" class="text-white text-sm">Inicio</a>
+                    <a href="servicios.html" class="text-muted text-sm hover:text-white transition-all duration-300">Servicios</a>
+                    <a href="casos.html" class="text-muted text-sm hover:text-white transition-all duration-300">Casos</a>
+                    <a href="nosotros.html" class="text-muted text-sm hover:text-white transition-all duration-300">Nosotros</a>
+                    <a href="contacto.html" class="bg-white text-dark px-4 py-2 rounded-full text-sm font-medium hover:bg-cyan transition-all duration-300">
                         Hablemos
                     </a>
                 </div>
 
                 <button id="mobile-menu-btn" class="md:hidden p-2" aria-label="Menú">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
                     </svg>
                 </button>
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden border-t border-white/5 bg-dark/95 backdrop-blur-xl">
+        <div id="mobile-menu" class="hidden md:hidden border-t border-white/5 bg-dark/95 backdrop-blur-2xl">
             <div class="px-6 py-4 space-y-4">
                 <a href="index.html" class="block text-white">Inicio</a>
-                <a href="servicios.html" class="block text-slate hover:text-cyan">Servicios</a>
-                <a href="nosotros.html" class="block text-slate hover:text-cyan">Nosotros</a>
+                <a href="servicios.html" class="block text-muted">Servicios</a>
+                <a href="casos.html" class="block text-muted">Casos</a>
+                <a href="nosotros.html" class="block text-muted">Nosotros</a>
                 <a href="contacto.html" class="block bg-white text-dark px-4 py-2 rounded-full text-center font-medium">Hablemos</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero -->
-    <section class="relative min-h-screen flex items-center justify-center px-6 pt-16">
-        <div class="max-w-4xl mx-auto text-center relative z-10">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 mb-8">
-                <span class="w-2 h-2 bg-cyan rounded-full animate-pulse"></span>
-                <span class="text-sm text-slate">Consultoría de datos e IA</span>
-            </div>
+    <section class="relative min-h-screen flex items-center px-6 pt-16">
+        <div class="max-w-5xl mx-auto w-full">
+            <div class="max-w-3xl">
+                <p class="text-cyan text-sm font-medium tracking-wider uppercase mb-6 animate-fade-in">Consultoría de datos e IA</p>
 
-            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.9] mb-8">
-                Datos que<br>
-                <span class="bg-gradient-to-r from-cyan via-purple to-cyan bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
-                    impulsan
-                </span>
-            </h1>
+                <h1 class="font-display text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.95] mb-8 animate-fade-in-up">
+                    Hacemos que<br>
+                    <span class="text-gradient">tus datos</span><br>
+                    trabajen
+                </h1>
 
-            <p class="text-xl md:text-2xl text-slate max-w-xl mx-auto mb-12">
-                Convertimos tus datos en ventaja competitiva. Sin rodeos.
-            </p>
+                <p class="text-muted text-lg md:text-xl max-w-lg mb-10 leading-relaxed animate-fade-in-up delay-100">
+                    Pipelines, dashboards, IA. Lo que necesites para dejar de tomar decisiones a ciegas.
+                </p>
 
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="contacto.html" class="group bg-white text-dark px-8 py-4 rounded-full font-medium hover:bg-cyan transition-all inline-flex items-center justify-center gap-2">
-                    Agenda una llamada
-                    <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                    </svg>
-                </a>
-                <a href="servicios.html" class="px-8 py-4 rounded-full font-medium border border-white/20 hover:border-white/40 transition-all text-center">
-                    Ver servicios
-                </a>
+                <div class="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-200">
+                    <a href="contacto.html" class="group inline-flex items-center justify-center gap-2 bg-white text-dark px-6 py-3.5 rounded-full font-medium hover:bg-cyan transition-all duration-300">
+                        Agendar llamada
+                        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </a>
+                    <a href="casos.html" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full font-medium border border-white/10 hover:border-white/30 transition-all duration-300">
+                        Ver casos de uso
+                    </a>
+                </div>
             </div>
         </div>
 
-        <!-- Scroll indicator -->
-        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-            <svg class="w-6 h-6 text-slate" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-            </svg>
-        </div>
-    </section>
-
-    <!-- Stats -->
-    <section class="relative py-24 px-6 border-y border-white/5">
-        <div class="max-w-6xl mx-auto">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
-                <div class="text-center">
-                    <div class="text-4xl md:text-5xl font-bold mb-2">8+</div>
-                    <div class="text-slate text-sm">años en datos</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl md:text-5xl font-bold mb-2">4</div>
-                    <div class="text-slate text-sm">años en EE.UU.</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl md:text-5xl font-bold text-cyan mb-2">IA</div>
-                    <div class="text-slate text-sm">en producción</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl md:text-5xl font-bold mb-2">RD</div>
-                    <div class="text-slate text-sm">enfoque local</div>
-                </div>
+        <!-- Scroll hint -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce-slow">
+            <div class="w-5 h-8 rounded-full border border-white/20 flex justify-center pt-2">
+                <div class="w-1 h-2 bg-white/40 rounded-full animate-scroll-down"></div>
             </div>
         </div>
     </section>
 
-    <!-- Services Preview -->
-    <section class="relative py-32 px-6">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-bold mb-4">Lo que hacemos</h2>
-                <p class="text-slate text-lg">De la estrategia a la implementación.</p>
+    <!-- Numbers -->
+    <section class="relative py-20 px-6 border-y border-white/5">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center animate-fade-in-up">
+                    <div class="font-display text-4xl md:text-5xl font-bold mb-1">8+</div>
+                    <div class="text-muted text-sm">años en datos</div>
+                </div>
+                <div class="text-center animate-fade-in-up delay-100">
+                    <div class="font-display text-4xl md:text-5xl font-bold mb-1">US</div>
+                    <div class="text-muted text-sm">experiencia</div>
+                </div>
+                <div class="text-center animate-fade-in-up delay-200">
+                    <div class="font-display text-4xl md:text-5xl font-bold text-cyan mb-1">IA</div>
+                    <div class="text-muted text-sm">en producción</div>
+                </div>
+                <div class="text-center animate-fade-in-up delay-300">
+                    <div class="font-display text-4xl md:text-5xl font-bold mb-1">RD</div>
+                    <div class="text-muted text-sm">base local</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What we do -->
+    <section class="relative py-24 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="mb-16">
+                <p class="text-cyan text-sm font-medium tracking-wider uppercase mb-4">Servicios</p>
+                <h2 class="font-display text-3xl md:text-5xl font-bold tracking-tight">Lo que hacemos</h2>
             </div>
 
             <div class="grid md:grid-cols-3 gap-6">
-                <!-- Card 1 -->
-                <div class="group relative p-8 rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.05] hover:border-cyan/30 transition-all">
-                    <div class="absolute inset-0 rounded-2xl bg-gradient-to-b from-cyan/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="relative">
-                        <div class="text-cyan text-4xl mb-6">01</div>
-                        <h3 class="text-xl font-semibold mb-3">Estrategia</h3>
-                        <p class="text-slate text-sm leading-relaxed">
-                            Roadmaps de datos. Casos de uso de IA. Evaluación de procesos.
-                        </p>
-                    </div>
-                </div>
+                <a href="servicios.html#estrategia" class="group p-8 rounded-2xl border border-white/5 bg-white/[0.01] hover:bg-white/[0.03] hover:border-cyan/20 transition-all duration-500">
+                    <div class="text-cyan/60 font-display text-5xl font-bold mb-6 group-hover:text-cyan transition-colors duration-500">01</div>
+                    <h3 class="font-display text-xl font-semibold mb-3">Estrategia</h3>
+                    <p class="text-muted text-sm leading-relaxed">
+                        Te decimos qué datos necesitas, dónde están, y qué hacer con ellos. Sin PowerPoints de 100 páginas.
+                    </p>
+                </a>
 
-                <!-- Card 2 -->
-                <div class="group relative p-8 rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.05] hover:border-purple/30 transition-all">
-                    <div class="absolute inset-0 rounded-2xl bg-gradient-to-b from-purple/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="relative">
-                        <div class="text-purple text-4xl mb-6">02</div>
-                        <h3 class="text-xl font-semibold mb-3">Desarrollo</h3>
-                        <p class="text-slate text-sm leading-relaxed">
-                            Pipelines. Data warehouses. Dashboards. Integración de IA.
-                        </p>
-                    </div>
-                </div>
+                <a href="servicios.html#desarrollo" class="group p-8 rounded-2xl border border-white/5 bg-white/[0.01] hover:bg-white/[0.03] hover:border-purple/20 transition-all duration-500">
+                    <div class="text-purple/60 font-display text-5xl font-bold mb-6 group-hover:text-purple transition-colors duration-500">02</div>
+                    <h3 class="font-display text-xl font-semibold mb-3">Desarrollo</h3>
+                    <p class="text-muted text-sm leading-relaxed">
+                        Pipelines, warehouses, dashboards, IA. Lo construimos y te lo dejamos funcionando.
+                    </p>
+                </a>
 
-                <!-- Card 3 -->
-                <div class="group relative p-8 rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.05] hover:border-cyan/30 transition-all">
-                    <div class="absolute inset-0 rounded-2xl bg-gradient-to-b from-cyan/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="relative">
-                        <div class="text-cyan text-4xl mb-6">03</div>
-                        <h3 class="text-xl font-semibold mb-3">Soporte</h3>
-                        <p class="text-slate text-sm leading-relaxed">
-                            Mantenimiento continuo. Analytics como servicio.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="text-center mt-12">
-                <a href="servicios.html" class="text-cyan hover:text-white transition-colors inline-flex items-center gap-2 text-sm">
-                    Ver todos los servicios
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                    </svg>
+                <a href="servicios.html#soporte" class="group p-8 rounded-2xl border border-white/5 bg-white/[0.01] hover:bg-white/[0.03] hover:border-cyan/20 transition-all duration-500">
+                    <div class="text-cyan/60 font-display text-5xl font-bold mb-6 group-hover:text-cyan transition-colors duration-500">03</div>
+                    <h3 class="font-display text-xl font-semibold mb-3">Soporte</h3>
+                    <p class="text-muted text-sm leading-relaxed">
+                        Mantenemos tu plataforma. Tú enfócate en el negocio.
+                    </p>
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Industries -->
-    <section class="relative py-32 px-6 border-y border-white/5">
-        <div class="max-w-6xl mx-auto">
+    <section class="relative py-24 px-6 border-t border-white/5">
+        <div class="max-w-5xl mx-auto">
             <div class="grid md:grid-cols-2 gap-16 items-center">
                 <div>
-                    <h2 class="text-3xl md:text-5xl font-bold mb-6">
-                        Sectores que<br>transformamos
+                    <p class="text-cyan text-sm font-medium tracking-wider uppercase mb-4">Industrias</p>
+                    <h2 class="font-display text-3xl md:text-4xl font-bold tracking-tight mb-6">
+                        Conocemos<br>tu sector
                     </h2>
-                    <p class="text-slate text-lg mb-8">
-                        Conocemos los desafíos específicos de cada industria en RD.
+                    <p class="text-muted leading-relaxed mb-8">
+                        Turismo, banca, retail, telecom, manufactura, salud. Cada uno con sus datos y sus dolores. Los entendemos.
                     </p>
-                    <a href="servicios.html" class="text-cyan hover:text-white transition-colors inline-flex items-center gap-2">
-                        Casos de uso por industria
+                    <a href="casos.html" class="inline-flex items-center gap-2 text-cyan hover:text-white transition-colors duration-300 text-sm">
+                        Ver casos por industria
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                         </svg>
                     </a>
                 </div>
 
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="p-6 rounded-xl border border-white/10 bg-white/[0.02] hover:border-cyan/30 transition-all">
-                        <div class="text-2xl mb-2">🏨</div>
-                        <div class="font-medium">Turismo</div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="p-5 rounded-xl border border-white/5 bg-white/[0.01] hover:border-white/10 transition-all duration-300">
+                        <span class="text-2xl">🏨</span>
+                        <div class="mt-2 text-sm font-medium">Turismo</div>
                     </div>
-                    <div class="p-6 rounded-xl border border-white/10 bg-white/[0.02] hover:border-cyan/30 transition-all">
-                        <div class="text-2xl mb-2">🏦</div>
-                        <div class="font-medium">Banca</div>
+                    <div class="p-5 rounded-xl border border-white/5 bg-white/[0.01] hover:border-white/10 transition-all duration-300">
+                        <span class="text-2xl">🏦</span>
+                        <div class="mt-2 text-sm font-medium">Banca</div>
                     </div>
-                    <div class="p-6 rounded-xl border border-white/10 bg-white/[0.02] hover:border-cyan/30 transition-all">
-                        <div class="text-2xl mb-2">🛒</div>
-                        <div class="font-medium">Retail</div>
+                    <div class="p-5 rounded-xl border border-white/5 bg-white/[0.01] hover:border-white/10 transition-all duration-300">
+                        <span class="text-2xl">🛒</span>
+                        <div class="mt-2 text-sm font-medium">Retail</div>
                     </div>
-                    <div class="p-6 rounded-xl border border-white/10 bg-white/[0.02] hover:border-cyan/30 transition-all">
-                        <div class="text-2xl mb-2">📡</div>
-                        <div class="font-medium">Telecom</div>
+                    <div class="p-5 rounded-xl border border-white/5 bg-white/[0.01] hover:border-white/10 transition-all duration-300">
+                        <span class="text-2xl">📡</span>
+                        <div class="mt-2 text-sm font-medium">Telecom</div>
                     </div>
-                    <div class="p-6 rounded-xl border border-white/10 bg-white/[0.02] hover:border-cyan/30 transition-all">
-                        <div class="text-2xl mb-2">🏭</div>
-                        <div class="font-medium">Manufactura</div>
+                    <div class="p-5 rounded-xl border border-white/5 bg-white/[0.01] hover:border-white/10 transition-all duration-300">
+                        <span class="text-2xl">🏭</span>
+                        <div class="mt-2 text-sm font-medium">Manufactura</div>
                     </div>
-                    <div class="p-6 rounded-xl border border-white/10 bg-white/[0.02] hover:border-cyan/30 transition-all">
-                        <div class="text-2xl mb-2">🏥</div>
-                        <div class="font-medium">Salud</div>
+                    <div class="p-5 rounded-xl border border-white/5 bg-white/[0.01] hover:border-white/10 transition-all duration-300">
+                        <span class="text-2xl">🏥</span>
+                        <div class="mt-2 text-sm font-medium">Salud</div>
                     </div>
                 </div>
             </div>
@@ -243,17 +224,16 @@
 
     <!-- CTA -->
     <section class="relative py-32 px-6">
-        <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-4xl md:text-6xl font-bold mb-6">
-                ¿Listo para<br>
-                <span class="text-cyan">empezar</span>?
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight mb-6">
+                ¿Tienes datos<br>que no usas?
             </h2>
-            <p class="text-slate text-lg mb-10">
-                30 minutos. Sin compromiso. Solo valor.
+            <p class="text-muted text-lg mb-10">
+                Hablemos. 30 minutos, sin compromiso, sin pitch de ventas.
             </p>
-            <a href="contacto.html" class="group bg-gradient-to-r from-cyan to-purple text-dark px-8 py-4 rounded-full font-medium hover:opacity-90 transition-all inline-flex items-center gap-2">
-                Agenda tu consulta gratis
-                <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <a href="contacto.html" class="group inline-flex items-center gap-2 bg-gradient-to-r from-cyan to-purple text-dark px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-all duration-300">
+                Agendar llamada
+                <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                 </svg>
             </a>
@@ -262,15 +242,16 @@
 
     <!-- Footer -->
     <footer class="border-t border-white/5 py-12 px-6">
-        <div class="max-w-6xl mx-auto">
+        <div class="max-w-5xl mx-auto">
             <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <div class="text-xl font-bold">Datívus<span class="text-cyan">.</span></div>
-                <div class="flex items-center gap-8 text-sm text-slate">
-                    <a href="servicios.html" class="hover:text-white transition-colors">Servicios</a>
-                    <a href="nosotros.html" class="hover:text-white transition-colors">Nosotros</a>
-                    <a href="contacto.html" class="hover:text-white transition-colors">Contacto</a>
+                <div class="font-display text-lg font-bold">datívus</div>
+                <div class="flex items-center gap-8 text-sm text-muted">
+                    <a href="servicios.html" class="hover:text-white transition-colors duration-300">Servicios</a>
+                    <a href="casos.html" class="hover:text-white transition-colors duration-300">Casos</a>
+                    <a href="nosotros.html" class="hover:text-white transition-colors duration-300">Nosotros</a>
+                    <a href="contacto.html" class="hover:text-white transition-colors duration-300">Contacto</a>
                 </div>
-                <div class="text-sm text-slate">© 2025 Datívus</div>
+                <div class="text-sm text-slate">© 2025</div>
             </div>
         </div>
     </footer>
